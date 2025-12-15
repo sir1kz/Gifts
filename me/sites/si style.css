@@ -1,0 +1,50 @@
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('si photos/shirtsi.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(6px);
+    z-index: -1;
+	} 
+	.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: left;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  display: flex;
+	width: 600px;              /* ← ОДИНАКОВЫЙ размер */
+  align-items: center;
+  gap: 20 px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;             /*  одинаковая высота */
+  object-fit: contain;       /* не растягивает, НЕ обрезает */
+  border-radius: 20px;       /*  скругление */
+  background: white;         /* красиво на красном фоне */
+}
+
+.gallery_item_text {
+    /* Позволяем тексту занять оставшееся пространство */
+    flex-grow: 1; 
+    /* Добавляем отступы, если нужно */
+    padding: 0 10px; 
+}
+.gallery-item figcaption {
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+    font-family: "Heebo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
